@@ -1,0 +1,117 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <p class="hero-prompt fade-in">~/martin.technology.llc $ <span class="glow-cyan">whoami</span></p>
+
+  <h1 class="fade-in fade-in-delay-1">{{ .Site.Params.tagline }}<span class="cursor"></span></h1>
+
+  <p class="hero-tagline fade-in fade-in-delay-2">{{ .Site.Params.subtagline }}</p>
+
+  <div class="hero-pitch tui-box fade-in fade-in-delay-3">
+    <span class="tui-box-label">// honest_tech</span>
+    <p><strong>Ever gone looking for PC repair and got sold a brand new PC instead?</strong></p>
+    <p>Technical advice that isn't a sales pitch but an actual answer. No upselling, no scare tactics, no mystery fees. Just someone who actually knows what they're doing, telling you what you need to hear.</p>
+  </div>
+
+  <div class="hero-cta fade-in fade-in-delay-4">
+    <a href="/services/" class="btn">BROWSE SERVICES</a>
+    <a href="/contact/" class="btn btn--green">GET IN TOUCH</a>
+  </div>
+</section>
+
+<!-- ═══ SERVICES GRID ═══ -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="glow-cyan">THERE IS A SOLUTION FOR EVERYTHING</h2>
+      <p>Technology is for solving issues, not creating more. Here is the difference.</p>
+    </div>
+
+    <div class="services-grid">
+      <a href="/services/remote-troubleshooting/" class="service-card fade-in">
+        <span class="card-index">[01]</span>
+        <span class="card-icon">🖥️</span>
+        <div class="card-body">
+          <h3>REMOTE TROUBLESHOOTING</h3>
+          <p>Instant browser-based remote access. I connect, diagnose, and fix — you watch it happen in real time.</p>
+          <span class="card-link">read more</span>
+        </div>
+      </a>
+
+      <a href="/services/consulting/" class="service-card fade-in fade-in-delay-1">
+        <span class="card-index">[02]</span>
+        <span class="card-icon">🔒</span>
+        <div class="card-body">
+          <h3>IT & CYBERSECURITY CONSULTING</h3>
+          <p>OS upgrades, data transfers, system backups, security audits. The stuff that keeps your digital life intact.</p>
+          <span class="card-link">read more</span>
+        </div>
+      </a>
+
+      <a href="/services/custom-workstations/" class="service-card fade-in fade-in-delay-2">
+        <span class="card-index">[03]</span>
+        <span class="card-icon">🛠️</span>
+        <div class="card-body">
+          <h3>CUSTOM WORKSTATIONS</h3>
+          <p>Breathe life into old hardware, or spec your new home office or gaming rig from scratch. Built to your needs, not a shelf model.</p>
+          <span class="card-link">read more</span>
+        </div>
+      </a>
+
+      <a href="/services/wifi-network/" class="service-card fade-in fade-in-delay-3">
+        <span class="card-index">[04]</span>
+        <span class="card-icon">📡</span>
+        <div class="card-body">
+          <h3>WIFI & NETWORK SUPPORT</h3>
+          <p>Dead zones, slow speeds, dropped connections. Expert configuration and troubleshooting for home and small office networks.</p>
+          <span class="card-link">read more</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PITCH / WHY US ═══ -->
+<section class="pitch-section">
+  <div class="pitch-grid container">
+    <div class="pitch-text">
+      <h2 class="glow-amber">NOT YOUR AVERAGE IT GUY</h2>
+      <p>Most IT support companies in town are big operations running scripts and checklists. Nothing wrong with that — until your problem doesn't fit the checklist.</p>
+      <p>Martin Technology LLC is one person with <strong>real expertise</strong>, and the philosophy that <em>troubleshooting applies to everything in life</em>. I'm good at fixing things because I'm even better at breaking them.</p>
+      <p>Serving <strong>Bryan, College Station, and Wixon Valley</strong>.</p>
+    </div>
+
+    <div class="pitch-terminal">
+      <div class="terminal-bar">
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+      </div>
+      <div class="terminal-body">
+        <div class="line"><span class="prompt-char">$</span> <span class="cmd">diagnose</span> --issue "laptop slow"</div>
+        <div class="line"><span class="output">scanning...</span></div>
+        <div class="line"><span class="output">found: 847 browser tabs, 3 toolbars,</span></div>
+        <div class="line"><span class="output">       McAfee fighting Norton for RAM</span></div>
+        <div class="line"><span class="warn">⚠ no reboot since 2024</span></div>
+        <div class="line"><span class="prompt-char">$</span> <span class="cmd">fix</span> --honest --no-upsell</div>
+        <div class="line"><span class="success">✓ resolved. $60. done.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="services-section" style="text-align:center;">
+  <div class="container">
+    <h2>READY TO FIX IT?</h2>
+    <p style="color:var(--text-muted); margin: 1rem 0 2rem; font-size:0.9rem;">No contracts, no retainers. Just pay for what you need.</p>
+    <div class="hero-cta">
+      <a href="/contact/" class="btn btn--magenta">CONTACT ME</a>
+      <a href="tel:{{ .Site.Params.phone }}" class="btn">CALL NOW</a>
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}

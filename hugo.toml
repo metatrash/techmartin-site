@@ -1,0 +1,36 @@
+baseURL = "https://techmartin.online/"
+languageCode = "en-us"
+title = "Martin Technology LLC"
+
+[params]
+  phone = "979-773-7343"
+  email = "techmartin@pm.me"
+  spiceworks = "https://martintech.on.spiceworks.com/portal/registrations"
+  square = "https://techmartin.online/store"
+  copyright = "© 2026 Martin Technology LLC. All rights reserved."
+  tagline = "SIMPLIFY THE PROCESS WITH TECH"
+  subtagline = "Expert IT & Cyber Security Consulting — Bryan / College Station, TX"
+  description = "Martin Technology LLC provides IT support, cybersecurity consulting, custom PC builds, and network troubleshooting in Bryan/College Station, Texas. Honest tech advice, not a sales pitch."
+
+[menu]
+  [[menu.main]]
+    name = "HOME"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "SERVICES"
+    url = "/services/"
+    weight = 2
+  [[menu.main]]
+    name = "ABOUT"
+    url = "/about/"
+    weight = 3
+  [[menu.main]]
+    name = "CONTACT"
+    url = "/contact/"
+    weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

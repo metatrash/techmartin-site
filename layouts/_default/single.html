@@ -1,0 +1,11 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+
+<article class="service-detail">
+  <h1>{{ .Title }}</h1>
+  <div class="service-body">
+    {{ .Content }}
+  </div>
+</article>
+
+{{ partial "footer.html" . }}

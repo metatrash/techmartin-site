@@ -1,0 +1,23 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+
+<article class="service-detail">
+  <p class="breadcrumb">
+    <a href="/">home</a> / <a href="/services/">services</a> / <span class="glow-green">{{ .Title | lower }}</span>
+  </p>
+
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.subtitle }}<p class="service-subtitle">{{ . }}</p>{{ end }}
+
+  <div class="service-body">
+    {{ .Content }}
+  </div>
+
+  <div class="service-cta">
+    <h3>NEED THIS?</h3>
+    <p>{{ with .Params.cta }}{{ . }}{{ else }}Let's get it sorted. Reach out and we'll figure out the best approach together.{{ end }}</p>
+    <a href="/contact/" class="btn btn--green">GET IN TOUCH</a>
+  </div>
+</article>
+
+{{ partial "footer.html" . }}

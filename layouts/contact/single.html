@@ -1,0 +1,81 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+
+<section class="contact-page">
+  <h1>CONTACT<span class="cursor"></span></h1>
+  <p class="contact-subtitle">Pick your preferred method. I typically respond within a few hours.</p>
+
+  <div class="contact-methods">
+    <div class="contact-card">
+      <div class="card-icon-sm">📞</div>
+      <h3>CALL / TEXT</h3>
+      <p><a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></p>
+      <p>Best for urgent issues or quick questions.</p>
+    </div>
+
+    <div class="contact-card">
+      <div class="card-icon-sm">📧</div>
+      <h3>EMAIL</h3>
+      <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+      <p>For detailed descriptions, screenshots, or non-urgent stuff.</p>
+    </div>
+
+    <div class="contact-card">
+      <div class="card-icon-sm">🖥️</div>
+      <h3>REMOTE ACCESS</h3>
+      <p><a href="{{ .Site.Params.spiceworks }}">Open Support Portal</a></p>
+      <p>Quick browser-based remote session — no install needed.</p>
+    </div>
+
+    <div class="contact-card">
+      <div class="card-icon-sm">💳</div>
+      <h3>PAY ONLINE</h3>
+      <p><a href="{{ .Site.Params.square }}">Pay via Square</a></p>
+      <p>Secure online payment for completed services.</p>
+    </div>
+  </div>
+
+  <div class="contact-form tui-box">
+    <span class="tui-box-label">// send_message</span>
+    <form action="https://formspree.io/f/{{ .Site.Params.formspree }}" method="POST">
+      <div class="form-group">
+        <label for="name">name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">email</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">phone <span style="color:var(--text-muted);">(optional)</span></label>
+        <input type="tel" id="phone" name="phone" placeholder="(979) 555-1234" />
+      </div>
+      <div class="form-group">
+        <label for="service">service_type</label>
+        <select id="service" name="service">
+          <option value="">-- select --</option>
+          <option value="remote">Remote Troubleshooting</option>
+          <option value="consulting">IT & Cybersecurity Consulting</option>
+          <option value="workstation">Custom Workstation</option>
+          <option value="network">WiFi & Network Support</option>
+          <option value="other">Other / Not Sure</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">message</label>
+        <textarea id="message" name="message" placeholder="Describe what's going on..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn--green" style="width:100%;">SEND MESSAGE</button>
+    </form>
+  </div>
+
+  <div class="tui-box" style="margin-top: 2rem;">
+    <span class="tui-box-label">// service_area</span>
+    <p style="font-size: 0.85rem; color: var(--text-muted);">
+      <strong class="glow-green">On-site:</strong> Bryan, College Station, Wixon Valley, and surrounding areas<br>
+      <strong class="glow-cyan">Remote:</strong> Anywhere with an internet connection
+    </p>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}

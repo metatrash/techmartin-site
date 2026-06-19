@@ -1,0 +1,23 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+
+<section class="services-index">
+  <h1>SERVICES</h1>
+  <p class="services-intro">Everything I offer, explained in plain English. Click into any service to learn exactly what's involved, what to expect, and what it costs.</p>
+
+  <div class="services-grid">
+    {{ range .Pages }}
+    <a href="{{ .Permalink }}" class="service-card">
+      <span class="card-index">[{{ printf "%02d" .Weight }}]</span>
+      {{ with .Params.icon }}<span class="card-icon">{{ . }}</span>{{ end }}
+      <div class="card-body">
+        <h3>{{ .Title | upper }}</h3>
+        <p>{{ .Params.summary }}</p>
+        <span class="card-link">read more</span>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+{{ partial "footer.html" . }}

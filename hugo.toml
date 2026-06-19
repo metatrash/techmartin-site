@@ -11,6 +11,7 @@ title = "Martin Technology LLC"
   tagline = "SIMPLIFY THE PROCESS WITH TECH"
   subtagline = "Expert IT & Cyber Security Consulting — Bryan / College Station, TX"
   description = "Martin Technology LLC provides IT support, cybersecurity consulting, custom PC builds, and network troubleshooting in Bryan/College Station, Texas. Honest tech advice, not a sales pitch."
+  formspree = "xykarndg"
 
 [menu]
   [[menu.main]]
